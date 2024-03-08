@@ -1,5 +1,6 @@
 import os
 from menu import menu
+from art import logo
 
 # resources
 water = 300
@@ -31,7 +32,7 @@ def calculate_money():
 
 
 while completed:
-
+    print(logo)
     order = input("What would you like? (espresso/latte/cappuccino): ").lower()
 
     if order in menu:
