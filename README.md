@@ -1,3 +1,4 @@
+Day 15 of 100-day Python coding challenge
 # Coffee Machine
 
 This Python program simulates a simple coffee machine that allows users to order various coffee drinks.
@@ -38,7 +39,7 @@ python coffee_machine.py
 ## Example
 
 ```python
-python coffee-machine.py
+python coffee_machine.py
 ```
 
 ```
