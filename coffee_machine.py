@@ -53,8 +53,9 @@ while completed:
                                 os.system('cls')
                                 print(f"Here is your {order} ☕️. Enjoy!")
                             else:
-                                os.system('cls')
                                 print(f"Here is ${change} in change. \nHere is your {order} ☕️. Enjoy!")
+                                input("Tap any key to order!")
+                                os.system('cls')
                         else:
 
                             print("Please pay enough amount for the product!")
