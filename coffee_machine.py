@@ -8,17 +8,26 @@ coffee = 100
 money = 0
 
 completed = True
+number_error_handler = True
 
 
 def calculate_money():
-    print("Please insert coins!")
-    quarter = input("How many Quarters?: ")
-    dime = input("How many dime?: ")
-    nickle = input("How many nickle?: ")
-    pennie = input("How many pennie?: ")
-    # TODO: error handel.
-    pay = 0.25 * int(quarter) + 0.10 * int(dime) + 0.05 * int(nickle) + 0.01 * int(pennie)
-    return pay
+    global number_error_handler
+    while number_error_handler:
+
+        print("Please insert coins!")
+        quarter = input("How many Quarters?: ")
+        dime = input("How many dime?: ")
+        nickle = input("How many nickle?: ")
+        pennie = input("How many pennie?: ")
+
+        if quarter.isnumeric() and dime.isnumeric() and nickle.isnumeric() and pennie.isnumeric():
+            number_error_handler = False
+            pay = 0.25 * int(quarter) + 0.10 * int(dime) + 0.05 * int(nickle) + 0.01 * int(pennie)
+            return pay
+        else:
+            os.system('cls')
+            print("Insert numbers only!")
 
 
 while completed:
