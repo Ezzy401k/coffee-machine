@@ -15,14 +15,13 @@ number_error_handler = True
 # Function to calculate the amount of money inserted by the user
 def calculate_money():
     global number_error_handler
-
+    number_error_handler = True
     while number_error_handler:
         print("Please insert coins!")
         quarter = input("How many Quarters?: ")
         dime = input("How many dime?: ")
         nickle = input("How many nickle?: ")
         pennie = input("How many pennie?: ")
-
         # Checking if all inputs are numeric
         if quarter.isnumeric() and dime.isnumeric() and nickle.isnumeric() and pennie.isnumeric():
             number_error_handler = False
@@ -84,3 +83,4 @@ while True:
 
 # Program ends here
 input("Tap Enter to Exit!")
+
